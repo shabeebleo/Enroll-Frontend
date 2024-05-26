@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Poppins", "sans-serif";
+  }
+  body {
+    background-color: #fdfeff;
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  .input-box {
+    @apply w-full text-sm bg-transparent rounded-lg outline-slate-300 border border-gray-300 p-2  ;
+  }
+
+  .btn-primary {
+    @apply bg-blue-500 text-white font-semibold py-2 px-3 w-full rounded-lg my-4 hover:bg-blue-600;
+  }
+  .btn-cancel {
+    @apply bg-red-500 text-white font-semibold py-2 px-3 w-full rounded-lg my-4 hover:bg-red-600;
+  }
+  .icon-btn{
+    @apply text-xl text-slate-300 cursor-pointer hover:text-primary
+  }
+  .input-delay{
+    @apply text-xl text-slate-400 
+  }
+  .text-primary{
+    @apply text-xl text-blue-600 
+  }
+
+  .course-list {
+    padding: 20px;
+  }
+
+  .course-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+  }
+
+  .course-item button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .course-item button:hover {
+    background-color: #0056b3;
+  }
+  .course-modal {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 100px auto;
+    z-index: 9999; /* Set a higher z-index value */
+  }
+  
+  .course-modal-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9998; /* Set a higher z-index value */
+  }
+}
